@@ -1,0 +1,31 @@
+{
+	"manifest_version":3,
+	"name":"View Raw",
+	"description":"Adds a 'View Raw' button to the context menu of hyperlinks",
+	"version":"1.0",
+	"permissions":
+	[
+		"contextMenus",
+		"webRequest"
+	],
+	"host_permissions":
+	[
+		"*://*/*"
+	],
+	"action":
+	{
+		"default_popup":"prompt.html",
+		"default_icon":"search_FILL0_wght400_GRAD0_opsz24.png"
+	},
+	"background":
+	{
+		"service_worker":"active.js"
+	},
+	"web_accessible_resources":
+	[
+		{
+			"resources":[ "viewer.html" ],
+			"matches":[ "<all_urls>" ]
+		}
+	]
+}
